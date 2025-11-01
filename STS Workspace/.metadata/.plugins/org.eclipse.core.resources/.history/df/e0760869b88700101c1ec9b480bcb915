@@ -1,0 +1,31 @@
+package com.example.demo.model;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class PlayerOperations {
+	public static void main(String[]args) {
+		Player p1 = new Player("Aria", 1500, 10, "Red", true, "Sniper", 85, 1200, "NA", "Crossbow", true);
+		Player p2 = new Player("Blake", 1200, 8, "Blue", false, "Medic", 90, 950, "EU", "Medkit", false);
+		Player p3 = new Player("Casey", 1500, 10, "Red", true, "Sniper", 85, 1200, "NA", "Crossbow", true); // Duplicate of p1
+		Player p4 = new Player("Drew", 900, 5, "Green", true, "Scout", 70, 600, "ASIA", "Dagger", false);
+		Player p5 = new Player("Eli", 2000, 12, "Blue", false, "Tank", 100, 1500, "EU", "Shield", true);
+		Player p6 = new Player("Finn", 1100, 7, "Red", true, "Medic", 90, 950, "EU", "Medkit", false); // Duplicate of p2
+		Player p7 = new Player("Gia", 950, 6, "Green", false, "Scout", 70, 600, "ASIA", "Dagger", false); // Duplicate of p4
+		Player p8 = new Player("Harper", 2000, 12, "Blue", false, "Tank", 100, 1500, "EU", "Shield", true); // Duplicate of p5
+		Player p9 = new Player("Ivy", 1300, 9, "Yellow", true, "Support", 80, 1100, "NA", "Pulse Rifle", true);
+		Player p10 = new Player("Jude", 800, 4, "Red", false, "Sniper", 60, 400, "ASIA", "Crossbow", false);
+		Player p11 = new Player("Kai", 1700, 11, "Yellow", true, "Support", 88, 1300, "NA", "Pulse Rifle", true);
+		Player p12 = new Player("Luna", 950, 6, "Green", false, "Scout", 70, 600, "ASIA", "Dagger", false); // Duplicate of p4/p7
+		Player p13 = new Player("Milo", 1500, 10, "Red", true, "Sniper", 85, 1200, "NA", "Crossbow", true); // Duplicate of p1/p3
+		Player p14 = new Player("Nia", 1300, 9, "Yellow", true, "Support", 80, 1100, "NA", "Pulse Rifle", true); // Duplicate of p9
+		Player p15 = new Player("Orion", 800, 4, "Red", false, "Sniper", 60, 400, "ASIA", "Crossbow", false); // Duplicate of p10
+
+		
+		List<Player> onlinePlayers = players.stream()
+			    .filter(Player::isOnline)
+			    .collect(Collectors.toList());
+
+
+	}
+}

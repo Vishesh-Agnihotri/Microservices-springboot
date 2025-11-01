@@ -1,0 +1,83 @@
+package com.example.demo;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.SequencedCollection;
+import java.util.TreeMap;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class ProgramsApplication {
+
+	public static void main(String[] args) {
+		int array[] = { 1, 24, 2, 4, 12, 5, 12, 5, 12, 5, 124 };
+		String name = " vishesh agnihotri is from   Infosys Limited    ";
+
+		List<Integer> filteredArray = Arrays.stream(array).boxed().distinct().collect(Collectors.toList());
+		System.out.println("How the array looks after boxed and distinct : " + filteredArray);
+		HashSet<Integer> filteredArray1 = new HashSet<>();
+		for (int i = 0; i < array.length; i++) {
+			filteredArray1.add(array[i]);
+		}
+		System.out.println("Removing duplicates using hashset: " + filteredArray1);
+		SequencedCollection<Integer> filteredOrderedArray = new LinkedHashSet();
+		for (int i = 0; i < array.length; i++) {
+			filteredOrderedArray.add(array[i]);
+		}
+		System.out.println("Using sequenced collection to print in same order as they appear: " + filteredOrderedArray);
+		List<Integer> sortedArray = Arrays.stream(array).boxed().sorted().collect(Collectors.toList());
+		System.out.println("Sorting using sorted: " + sortedArray);
+		System.out.println();
+
+		List<String> filteredString = Arrays.stream(name.split(" ")).collect(Collectors.toList());
+		Collections.reverse(filteredString);
+		System.out.println(filteredString);
+		System.out.println(String.join(" ", filteredString));
+		List<String> filteredString1 = Arrays.stream(name.split("")).collect(Collectors.toList());
+		Collections.reverse(filteredString1);
+		System.out.println(filteredString1);
+		System.out.println(String.join("", filteredString1));
+		SequencedCollection<String> filteredString2 = Arrays.stream(name.split(" ")).collect(Collectors.toList());
+		System.out.println(filteredString2.reversed());
+		System.out.println(String.join(" ", filteredString2.reversed()));
+		List<String> sortedString = Arrays.stream(name.split(" ")).sorted().collect(Collectors.toList());
+		System.out.println(sortedString);
+		System.out.println();
+
+		String newName = "Vishesh";
+		Map<Character, Long> filteredString4 = newName.chars().mapToObj(c -> (char) c)
+				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));// Functioin.identity() is
+																							// same as x->x lamnda
+		System.out.println(filteredString4);
+		
+		//sorting characters in string
+		String randAlpha= "bbccdefbbaa";
+		List<String> randStream = Arrays.stream(randAlpha.split("")).collect(Collectors.toList());
+		Collections.sort(randStream);
+		System.out.println(String.join("", randStream));
+		
+		int a[]= {10,20,30,40,50,60,80,110,130,140,170};
+		int m1=110;
+		int position = -1;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == m1) {
+                position = i;
+                break;
+            }
+        }
+
+        System.out.println(position);
+    
+        String v = "vishesh agnihotri";
+        Map<Character, Long> frequencyMap = v.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+	}
+
+}

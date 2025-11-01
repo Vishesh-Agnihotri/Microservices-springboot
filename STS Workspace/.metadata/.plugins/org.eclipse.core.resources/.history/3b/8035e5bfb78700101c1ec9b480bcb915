@@ -1,0 +1,30 @@
+public class Player {
+    private String name;
+    private int score;
+    private int level;
+    private String team;
+    private boolean isOnline;
+    private String role;
+    private int health;
+    private int experience;
+    private String region;
+    private String favoriteWeapon;
+    private boolean isPremium;
+
+    public Player(String name, int score, int level, String team, boolean isOnline, String role,
+                  int health, int experience, String region, String favoriteWeapon, boolean isPremium) {
+        this.name = name;
+        this.score = score;
+        this.level = level;
+        this.team = team;
+        this.isOnline = isOnline;
+        this.role = role;
+        this.health = health;
+        this.experience = experience;
+        this.region = region;
+        this.favoriteWeapon = favoriteWeapon;
+        this.isPremium = isPremium;
+    }
+
+    // Getters and setters for all fields (omitted here for brevity)
+}
