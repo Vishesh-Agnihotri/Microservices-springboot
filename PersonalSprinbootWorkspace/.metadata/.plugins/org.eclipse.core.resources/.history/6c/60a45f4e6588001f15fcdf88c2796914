@@ -1,0 +1,161 @@
+package com.test.string;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Spliterator;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
+
+public class App {
+	public static void main(String[] args) {
+		String name = "Visehsh";
+		char nameArray[] = name.toCharArray();
+		for (int i = nameArray.length - 1; i >= 0; i--) {
+			System.out.print(nameArray[i]);
+		}
+		System.out.println();
+		List<String> reverseString = Arrays.asList(name.split(""));
+		System.out.println(reverseString);
+		reverseString = reverseString.stream().distinct().collect(Collectors.toList());
+		System.out.println(reverseString);
+		Collections.reverse(reverseString);
+		System.out.println(String.join("", reverseString));
+		System.out.println();
+		System.out.println(nameArray);
+		System.out.println();
+		HashMap<Character, Integer> count = new HashMap<>();
+		for (char word : nameArray) {
+			if (count.containsKey(word)) {
+				count.put(word, count.get(word) + 1);
+			} else {
+				count.put(word, 1);
+			}
+		}
+		System.out.println(count);
+
+		// printing duplicate elements
+		for (Map.Entry<Character, Integer> duplicates : count.entrySet()) {
+			if (duplicates.getValue() > 1) {
+				System.out.print(duplicates.getKey());
+			}
+		}
+		System.out.println();
+
+		TreeMap<Character, Integer> sortedCount = new TreeMap<>();
+		sortedCount.putAll(count);
+		System.out.println(sortedCount);
+		System.out.println();
+
+		HashSet<Character> distinct = new HashSet<>(sortedCount.keySet());
+		System.out.println(distinct);
+		System.out.println();
+
+		TreeSet<Character> sortedDistinct = new TreeSet<>(sortedCount.keySet());
+		System.out.println(sortedDistinct);
+
+		System.out.println();
+		List<String> names = Arrays.asList("asd", "asd", "bbf", "rggrgr");
+		List<String> filteredNames = names.stream().filter(c -> c.startsWith("a")).map(c -> c.concat(" fruit"))
+				.collect(Collectors.toList());
+		List<String> filter = names.stream().filter(c -> !c.startsWith("a")).collect(Collectors.toList());
+		System.out.println(filter);
+		System.out.println(filteredNames);
+		filteredNames.addAll(filter);
+		System.out.println(filteredNames);
+
+		List<String> names1 = Arrays.asList("asd", "asd", "bbf", "rggrgr");
+
+		List<String> result = names1.stream().map(c -> c.startsWith("a") ? c.concat(" fruit") : c)
+				.collect(Collectors.toList());
+
+		System.out.println(result);
+		System.out.println();
+
+		String firstSentence = "Hello hello Ab aB";
+		List<String> newSentence = Arrays.asList(firstSentence.split(" "));
+		System.out.println("Original Sentence: " + newSentence);
+
+		Set<String> newFirst = new HashSet<>();
+		for (String word : newSentence) {
+			// Convert the word to lowercase before checking and adding it to the set
+			if (!newFirst.contains(word.toLowerCase())) {
+				newFirst.add(word.toLowerCase());
+			}
+		}
+		System.out.println("Sentence with duplicates removed (case insensitive): " + newFirst);
+
+		String sentence = "Vishesh is working in TCS";
+		List<String> sentenceArray = Arrays.asList(sentence.split(" "));
+		System.out.println(sentenceArray);
+		Collections.reverse(sentenceArray);
+		System.out.println(sentenceArray);
+		System.out.println(String.join(" ", sentenceArray));
+		List<String> reverseSentence = Arrays.asList(sentence.split(""));
+		System.out.println(reverseSentence);
+		Collections.reverse(reverseSentence);
+		System.out.println(String.join("", reverseSentence));
+		String a = "how are you";
+		List<String> b = Arrays.asList(a.split(" "));
+		Collections.reverse(b);
+		System.out.println(String.join(" ", b));
+		System.out.println();
+		
+		
+		String stringArray = "12,12,4,1,5,1,5,6,2,56,23,12,56,6,23";
+		List<String> spliString = Arrays.asList(stringArray.split(","));
+		spliString.stream().distinct().sorted().collect(Collectors.toList());
+		System.out.println(spliString);
+		List<String>sortedList = new ArrayList<>(spliString);
+		Collections.sort(sortedList);
+		System.out.println(sortedList);
+		System.out.println();
+		int[] arr = {231,23,1123,2,123,12,12,312};
+		List<Integer> convertedArr = Arrays.stream(arr).boxed().sorted().collect(Collectors.toList());
+		System.out.println(convertedArr);
+		List<Integer> distincArr = Arrays.stream(arr).boxed().distinct().sorted().collect(Collectors.toList());
+		System.out.println(distincArr);
+		System.out.println();
+		String chars = "aaabbbccaaa";
+	    char[] charsArray= chars.toCharArray();
+	    for(int i=0;i<charsArray.length-1;i++) {
+	    	int k=0;
+	    	if(charsArray[i] == charsArray[i+1]) {
+	    		k++;
+	    	}
+	    	else {
+	    		k=0;
+	    	}
+	    	System.out.println(charsArray[i] + "--" + k);
+	    }	
+	    System.out.println();
+		
+		 String namesCollection = "abc,fge,vishesh,agnihotri,nikky";
+	        List<String> namesList = Arrays.asList(namesCollection.split(","));  // Split by comma
+	        System.out.println(namesList);
+
+	        for(String word : namesList) {
+	            int vowelCount = 0;
+	            for (char ch : word.toCharArray()) {
+	                if (isVowel(ch)) {
+	                    System.out.print(ch + " ");
+	                    vowelCount++;
+	                }
+	            }
+	            System.out.println(" - Vowel count in \"" + word + "\": " + vowelCount);
+	        }
+	        System.out.println();
+	    }
+
+	    public static boolean isVowel(char ch) {
+	        return "aeiouAEIOU".indexOf(ch) != -1;  // Check if the character is a vowel
+	    }
+	    
+	    
+}

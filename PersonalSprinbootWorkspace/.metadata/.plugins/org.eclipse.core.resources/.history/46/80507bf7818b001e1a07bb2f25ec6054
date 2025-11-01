@@ -1,0 +1,5 @@
+package com.engine.api.constants;
+
+public class Constants {
+	private final String apiUrl;
+}

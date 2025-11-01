@@ -1,0 +1,3 @@
+com\genelab\controller\GenelabController.class
+com\genelab\RestfulWebServicesApplication.class
+com\genelab\model\GeneLab.class

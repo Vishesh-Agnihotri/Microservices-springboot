@@ -1,0 +1,5 @@
+package com.engine.api.constants;
+
+public class Constants {
+	private final String apiUrl=https://api.nasa.gov/techtransfer/patent/?engine&api_key=";
+}

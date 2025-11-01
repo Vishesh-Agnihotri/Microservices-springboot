@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\PersonalSprinbootWorkspace\genelab"/>
+			<item value="D:\PersonalSprinbootWorkspace\response"/>
+			<item value="D:\PersonalSprinbootWorkspace\servicediscovery"/>
+			<item value="D:\PersonalSprinbootWorkspace\arrays"/>
+			<item value="D:\GitLabOpenApis\OpenApis\post"/>
+			<item value="D:\PersonalSprinbootWorkspace"/>
+			<item value="D:\PersonalSprinbootWorkspace\"/>
+			<item value="D:\PersonalSprinbootWorkspace\posts"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.practice.dsa"/>
+			<item value="com.test"/>
+			<item value="com.test.elasticsearch"/>
+			<item value="com.test.registration"/>
+			<item value="com.test.programs"/>
+			<item value="com.test.configserver"/>
+			<item value="com.test.servicediscovery"/>
+			<item value="com.test.arrays"/>
+			<item value="com.test.string"/>
+			<item value="com.dummy.todos"/>
+			<item value="com.image.response"/>
+		</list>
+		<list key="groupId">
+			<item value="dsa-practice"/>
+			<item value="com.test"/>
+			<item value="com.dummy"/>
+			<item value="com.image"/>
+		</list>
+		<list key="artifactId">
+			<item value="dsa-arrays"/>
+			<item value="test"/>
+			<item value="elasticsearch"/>
+			<item value="eureka-registration"/>
+			<item value="programs"/>
+			<item value="configserver"/>
+			<item value="servicediscovery"/>
+			<item value="arrays"/>
+			<item value="string"/>
+			<item value="todos"/>
+			<item value="response"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\imabh\Downloads\limits-service"/>
+			<item value="C:\Users\imabh\Downloads\spring-cloud-config-server"/>
+			<item value="C:\Users\imabh\Downloads\cloudconfig"/>
+			<item value="C:\Users\imabh\Downloads\elasticsearch"/>
+			<item value="C:\Users\imabh\Downloads\eureka-registration\eureka-registration"/>
+			<item value="C:\Users\imabh\Downloads\eureka-server"/>
+			<item value="C:\Users\imabh\Downloads\netflix-eureka-naming-server\netflix-eureka-naming-server"/>
+			<item value="C:\Users\imabh\Downloads\currency-exchange-service\currency-exchange-service"/>
+			<item value="C:\Users\imabh\Downloads\currency-conversion-service\currency-conversion-service"/>
+			<item value="D:\GitLabOpenApis\OpenApis\post"/>
+			<item value="D:\GitLabOpenApis\OpenApis\countries"/>
+			<item value="C:\Users\imabh\Desktop\Creating a Hello World Service\Creating a Hello World Service\restful-web-services"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="post"/>
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,5 @@
+com\test\personal\controller\NasaDonkiController.class
+com\test\personal\MySpringBootApplication.class
+com\test\personal\model\SolarFlare$Instrument.class
+com\test\personal\model\SolarFlare$LinkedEvent.class
+com\test\personal\model\SolarFlare.class
