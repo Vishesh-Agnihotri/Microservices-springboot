@@ -1,0 +1,38 @@
+package com.example.demo.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class PlayerOperations {
+	public static void main(String[]args) {
+		
+		List<Player> players = new ArrayList<>();
+		players.add(new Player("Aria", 1500, 10, "Red", true, "Sniper", 85, 1200, "NA", "Crossbow", true));
+		players.add(new Player("Blake", 1200, 8, "Blue", false, "Medic", 90, 950, "EU", "Medkit", false));
+		players.add(new Player("Casey", 1500, 10, "Red", true, "Sniper", 85, 1200, "NA", "Crossbow", true)); // Duplicate of Aria
+		players.add(new Player("Drew", 900, 5, "Green", true, "Scout", 70, 600, "ASIA", "Dagger", false));
+		players.add(new Player("Eli", 2000, 12, "Blue", false, "Tank", 100, 1500, "EU", "Shield", true));
+		players.add(new Player("Finn", 1100, 7, "Red", true, "Medic", 90, 950, "EU", "Medkit", false)); // Duplicate of Blake
+		players.add(new Player("Gia", 950, 6, "Green", false, "Scout", 70, 600, "ASIA", "Dagger", false)); // Duplicate of Drew
+		players.add(new Player("Harper", 2000, 12, "Blue", false, "Tank", 100, 1500, "EU", "Shield", true)); // Duplicate of Eli
+		players.add(new Player("Ivy", 1300, 9, "Yellow", true, "Support", 80, 1100, "NA", "Pulse Rifle", true));
+		players.add(new Player("Jude", 800, 4, "Red", false, "Sniper", 60, 400, "ASIA", "Crossbow", false));
+		players.add(new Player("Kai", 1700, 11, "Yellow", true, "Support", 88, 1300, "NA", "Pulse Rifle", true));
+		players.add(new Player("Luna", 950, 6, "Green", false, "Scout", 70, 600, "ASIA", "Dagger", false)); // Duplicate of Drew/Gia
+		players.add(new Player("Milo", 1500, 10, "Red", true, "Sniper", 85, 1200, "NA", "Crossbow", true)); // Duplicate of Aria/Casey
+		players.add(new Player("Nia", 1300, 9, "Yellow", true, "Support", 80, 1100, "NA", "Pulse Rifle", true)); // Duplicate of Ivy
+		players.add(new Player("Orion", 800, 4, "Red", false, "Sniper", 60, 400, "ASIA", "Crossbow", false)); // Duplicate of Jude
+
+		Map<String,Character> firstChar = players.stream().collect(Collectors.toMap(Player::getName, c->c.getName().charAt(0)));
+		System.out.println(firstChar);
+		
+		Map<String,List<String>> roleWithName = players.stream().collect(Collectors.groupingBy(Player::getRole,Collectors.mapping(Player::getName, Collectors.toList())));
+		roleWithName.forEach((k,v)->{
+			System.out.println(k);
+			v.forEach(n->System.out.print(n+" "));
+			System.out.println();
+		});
+	}
+}

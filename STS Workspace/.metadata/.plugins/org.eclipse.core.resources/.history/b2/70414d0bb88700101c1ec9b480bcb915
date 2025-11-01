@@ -1,0 +1,17 @@
+package com.example.demo.model;
+
+public class PlayerOperations {
+	public static void main(String[]args) {
+		Player p1 = new Player("Aria", 1500, 10, "Red", true, "Sniper");
+		Player p2 = new Player("Blake", 1200, 8, "Blue", false, "Medic");
+		Player p3 = new Player("Casey", 1500, 10, "Red", true, "Sniper"); // Duplicate of p1
+		Player p4 = new Player("Drew", 900, 5, "Green", true, "Scout");
+		Player p5 = new Player("Eli", 2000, 12, "Blue", false, "Tank");
+		Player p6 = new Player("Finn", 1100, 7, "Red", true, "Medic");
+		Player p7 = new Player("Gia", 950, 6, "Green", false, "Scout");
+		Player p8 = new Player("Harper", 2000, 12, "Blue", false, "Tank"); // Duplicate of p5
+		Player p9 = new Player("Ivy", 1300, 9, "Yellow", true, "Support");
+		Player p10 = new Player("Jude", 800, 4, "Red", false, "Sniper");
+
+	}
+}
