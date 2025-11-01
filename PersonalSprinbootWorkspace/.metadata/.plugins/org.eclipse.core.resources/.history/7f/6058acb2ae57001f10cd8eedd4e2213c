@@ -1,0 +1,49 @@
+package com.test.string;
+
+import java.util.*;
+
+public class App {
+	public static void main( String[] args )
+    {
+    	String name = "Visehsh";
+    	char nameArray[]= name.toCharArray();
+    	System.out.println(nameArray);
+    	System.out.println();
+    	HashMap<Character,Integer> count = new HashMap<>();
+    	for(char word : nameArray) {
+    		if(count.containsKey(word)) {
+    			count.put(word, count.get(word)+1);
+    		}
+    		else {
+    			count.put(word, 1);
+    		}
+    	}
+		System.out.println(count);
+
+		//printing duplicate elements 
+		for(Map.Entry<Character,Integer> duplicates : count.entrySet()) {
+			if(duplicates.getValue()>1) {
+				System.out.print(duplicates.getKey());
+			}
+		}
+		System.out.println();
+		
+		TreeMap<Character,Integer> sortedCount = new TreeMap<>();
+		sortedCount.putAll(count);
+		System.out.println(sortedCount);
+		System.out.println();
+		
+		HashSet<Character> distinct = new HashSet<>(sortedCount.keySet());
+		System.out.println(distinct);
+		System.out.println();
+		
+		TreeSet<Character> sortedDistinct = new TreeSet<>(sortedCount.keySet());
+		System.out.println(sortedDistinct);
+		
+		
+		String sentence = "Hi , This program is to remove all whitespaces";
+		
+		
+		
+    }
+}

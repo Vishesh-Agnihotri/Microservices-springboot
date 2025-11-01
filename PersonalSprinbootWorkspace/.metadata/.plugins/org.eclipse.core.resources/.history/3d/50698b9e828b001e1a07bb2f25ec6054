@@ -1,0 +1,22 @@
+package com.engine.api.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.client.RestTemplate;
+
+import com.engine.api.constants.Constants;
+import com.engine.api.model.Model;
+
+public class Controller {
+
+	@Value("${nasa.engine.api.key}")
+	private String apiKey;
+	
+	@GetMapping("engine")
+	public Model getModelData() {
+		String apiUrl=Constants.apiUrl+apiKey;
+		RestTemplate restTemplate= new RestTemplate();
+		Model data = restTemplate.getForObject(apiUrl, Model.class);
+		return data;
+	}
+}

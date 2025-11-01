@@ -1,0 +1,5 @@
+com\practice\post\data\PostFetcher.class
+com\practice\post\model\Post.class
+com\practice\post\RestfulWebServicesApplication.class
+com\practice\post\constants\Constants.class
+com\practice\post\controller\PostController.class

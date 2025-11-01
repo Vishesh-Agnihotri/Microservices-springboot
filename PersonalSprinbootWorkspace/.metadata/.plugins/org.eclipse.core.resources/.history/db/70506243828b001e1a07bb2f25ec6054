@@ -1,0 +1,17 @@
+package com.engine.api.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+
+import com.engine.api.constants.Constants;
+import com.engine.api.model.Model;
+
+public class Controller {
+
+	@Value("${nasa.engine.api.key}")
+	private String apiKey;
+	
+	public Model getModelData() {
+		String apiUrl=Constants.apiUrl+apiKey;
+		return null;
+	}
+}

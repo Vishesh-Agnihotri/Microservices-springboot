@@ -1,0 +1,9 @@
+package com.engine.api.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class Controller {
+
+	@Value("${nasa.engine.api.key}")
+	private String apiKey;
+}
